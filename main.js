@@ -67,13 +67,14 @@ javascript: (function () {
       mouseDisplay.setAttribute('style','left: ' + video.currentTime*lengthProcessBar/duration + 'px');
       document.querySelector('.vjs-progress-holder').appendChild(mouseDisplay);
   });
-  
+    if (listTime.length) {
     listTime.forEach((time) => {
       var mouseDisplay = document.createElement('div');
       mouseDisplay.setAttribute('class','vjs-mouse-display'); 
       mouseDisplay.setAttribute('style','left: ' + time.value*lengthProcessBar/duration + 'px');
       document.querySelector('.vjs-progress-holder').appendChild(mouseDisplay);
     });
+    }
     var menuTimeDiv = document.createElement('div'); 
     var menuTimeButton = document.createElement('button'); 
     var menuTimeSpan = document.createElement('span'); 
