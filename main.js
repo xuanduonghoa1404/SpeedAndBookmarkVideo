@@ -67,7 +67,7 @@ javascript: (function () {
       mouseDisplay.setAttribute('style','left: ' + video.currentTime*lengthProcessBar/duration + 'px');
       document.querySelector('.vjs-progress-holder').appendChild(mouseDisplay);
   });
-    if (listTime.length) {
+    if (listTime !== null && listTime.length) {
     listTime.forEach((time) => {
       var mouseDisplay = document.createElement('div');
       mouseDisplay.setAttribute('class','vjs-mouse-display'); 
